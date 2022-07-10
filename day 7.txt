@@ -1,0 +1,42 @@
+Write a "person" class to hold all the details:
+
+class  person {
+constructor (Firstname,Lastname,age,place) {
+    this.Firstname = Firstname;
+    this.Lastname = Lastname;
+    this.age = age;
+    this.place = place;
+}
+getDetails(){
+    return(`the name of the person ${this.Firstname} ${this.Lastname} with age ${this.age} born at ${this.place}`)
+}
+}
+
+let person1 = new person("suresh","kumar","25","kanyakumari");
+let person2 = new person("vilay","joseph","45","chennai");
+console.log(person1.getDetails());
+
+Uber price:
+
+class  uber {
+    constructor (Distance ,rate , waitingperiod) {
+        this.Distance = Distance;
+        this.rate = rate;
+        this.waitingperiod = waitingperiod;
+    
+    }
+
+getRideDetails(){
+    return(`The distance of the ride is ${this.Distance}km and the rate of ${this.rate} with waitingperiod of ${this.waitingperiod}minutes`)
+}
+getPrice(){
+
+    let calculateprice = (this.rate * this.Distance ) + (this.waitingperiod * 5)
+    return calculateprice;
+}
+}
+
+let uber1 = new uber("14","15","20");
+
+console.log(uber1.getRideDetails());
+console.log("total price",uber1.getPrice());
